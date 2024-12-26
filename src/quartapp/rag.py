@@ -38,6 +38,7 @@ index_name = "VectorSearchIndex"
 vector_dimensions = 1536  # text-embedding-ada-002 uses a 1536-dimensional embedding vector
 num_lists = 1
 similarity = "COS"  # cosine distance
+kind = "VECTOR_IVF" #vector search
 
 
 async def prompt_with_rag_or_vector(query_term: str, option: str) -> str:
