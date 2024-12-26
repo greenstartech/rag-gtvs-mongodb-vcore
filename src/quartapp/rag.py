@@ -59,7 +59,7 @@ async def prompt_with_rag_or_vector(query_term: str, option: str) -> str:
 def initialize_sk_chat_embedding() -> Kernel:
     kernel = Kernel()
     # adding azure openai chat service
-    chat_model_deployment_name = os.environ.get("AZURE_OPENAI_CHAT_DEPLOYMENT_NAME") or "chat-deployment"
+    chat_model_deployment_name = os.environ.get("AZURE_OPENAI_CHAT_DEPLOYMENT_NAME") or "gpt-35-turbo"
     endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT") or "https://test-endpoint.openai.com/"
     api_key = os.environ.get("AZURE_OPENAI_API_KEY") or "VerySecretApiKey"
 
@@ -75,7 +75,7 @@ def initialize_sk_chat_embedding() -> Kernel:
 
     # adding azure openai text embedding service
     embedding_model_deployment_name = (
-        os.environ.get("AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT_NAME") or "embedding-deployment"
+        os.environ.get("AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT_NAME") or "embedding-model"
     )
 
     kernel.add_service(
