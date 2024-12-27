@@ -7,7 +7,7 @@ from argparse import ArgumentParser, Namespace
 from semantic_kernel.memory.memory_store_base import MemoryStoreBase  # type: ignore [import-untyped]
 from semantic_kernel.memory.semantic_text_memory import SemanticTextMemory  # type: ignore [import-untyped]
 
-from quartapp.rag.py import initialize_sk_chat_embedding, initialize_sk_memory_store
+from quartapp.rag import initialize_sk_chat_embedding, initialize_sk_memory_store
 
 logging.basicConfig(
     handlers=[logging.StreamHandler()],
